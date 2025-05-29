@@ -1,0 +1,84 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background-color: #e9ebef;
+}
+
+.login-page {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #e9ebef;
+}
+
+.login-container {
+  text-align: center;
+}
+
+.logo {
+  width: 150px;
+  margin-bottom: 20px;
+}
+
+.login-box {
+  background-color: #c2e3dc;
+  padding: 30px 20px;
+  border-radius: 20px;
+  width: 280px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.user-icon {
+  font-size: 50px;
+  background-color: #4db58d;
+  color: white;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.input {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: none;
+  border-radius: 20px;
+  background-color: #28a37f;
+  color: white;
+  font-size: 14px;
+}
+
+.input::placeholder {
+  color: white;
+}
+
+.options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+  margin-bottom: 15px;
+  color: #444;
+}
+
+.forgot {
+  color: #444;
+  text-decoration: none;
+}
+
+.login-button {
+  background-color: #00477e;
+  color: white;
+  border: none;
+  padding: 10px 0;
+  width: 100%;
+  border-radius: 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
