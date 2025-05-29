@@ -1,0 +1,289 @@
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+  overflow-x: hidden; /* Evita rolagem horizontal */
+}
+body {
+  background-color: #f0f2f5; /* Cor de fundo padrão para o body */
+}
+
+.homepage-container {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  min-height: 100vh; /* Garante que ocupe a altura total da viewport */
+  overflow-x: hidden; /* Evita rolagem horizontal */
+}
+
+/* Cabeçalho */
+.homepage-header {
+  background-color: #5b87a9; /* Azul do cabeçalho  */
+  color: white;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.homepage-logo-section {
+  display: flex;
+  align-items: center;
+}
+
+.homepage-logo {
+  max-width: 120px; /* Tamanho do logo */
+  height: auto;
+}
+
+.homepage-login-btn {
+  background-color: #4CAF50; /* Verde do botão de login  */
+  color: white;
+  padding: 8px 20px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 1em;
+  font-weight: bold;
+  transition: background-color 0.2s ease;
+}
+
+.homepage-login-btn:hover {
+  background-color: #3eaf72;
+}
+
+/* Seção Principal (Hero) */
+.homepage-hero-section {
+  width: 100%;
+  height: 400px; /* Altura da seção hero */
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+}
+
+.homepage-hero-overlay {
+  background-color: rgba(0, 0, 0, 0.3); /* Overlay escuro para contraste do texto */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.homepage-hero-title {
+  font-size: 2.5em;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.homepage-hero-subtitle {
+  font-size: 1.8em;
+  margin-top: 0;
+  margin-bottom: 30px;
+  font-weight: normal;
+}
+
+.homepage-agendamento-btn {
+  background-color: #2f8d60; /* Verde do botão de agendamento  */
+  color: white;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 30px;
+  font-size: 1.1em;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.homepage-agendamento-btn:hover {
+  background-color: #3eaf72;
+}
+
+/* Seção de Cards de Serviços */
+.homepage-service-cards {
+  background-color: #5b87a9; /* Azul da seção de cards  */
+  padding: 30px 20px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.homepage-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: white;
+  font-size: 1.1em;
+  font-weight: bold;
+  width: 150px; /* Largura fixa para os cards */
+}
+
+.homepage-card-icon {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 10px;
+  border-radius: 50%; /* Para ícones em círculo, se for o caso */
+  background-color: rgba(255, 255, 255, 0.2); /* Fundo sutil para o ícone */
+  padding: 5px;
+}
+
+/* Seção "Quem Somos?" */
+.homepage-quem-somos-section {
+  background-color: #436e8b; /* Azul mais escuro  */
+  padding: 50px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  color: white;
+}
+
+.homepage-quem-somos-image-container {
+  flex: 1;
+  min-width: 300px; /* Largura mínima para a imagem */
+  max-width: 450px;
+  text-align: center;
+}
+
+.homepage-quem-somos-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.homepage-quem-somos-content {
+  flex: 1;
+  min-width: 300px; /* Largura mínima para o texto */
+  max-width: 500px;
+  text-align: left;
+}
+
+.homepage-quem-somos-title {
+  font-size: 2em;
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.homepage-quem-somos-text {
+  font-size: 1em;
+  line-height: 1.6;
+}
+
+/* Seção de Imagens Inferiores */
+.homepage-bottom-images-section {
+  background-color: #5b87a9; /* Azul da seção de cards  */
+  padding: 40px 20px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.homepage-bottom-image-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: white;
+  font-size: 1.1em;
+  font-weight: bold;
+  width: 280px; /* Largura para os cards de imagem */
+}
+
+.homepage-bottom-image {
+  width: 100%;
+  height: 200px; /* Altura fixa para as imagens */
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.homepage-bottom-image-caption {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+/* Rodapé */
+.homepage-footer {
+  background-color: #5b87a9; /* Azul do cabeçalho  */
+  padding: 30px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.homepage-footer-logo {
+  max-width: 120px;
+  height: auto;
+  opacity: 0.8;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .homepage-hero-title {
+    font-size: 1.8em;
+  }
+  .homepage-hero-subtitle {
+    font-size: 1.2em;
+  }
+  .homepage-agendamento-btn {
+    padding: 12px 25px;
+    font-size: 1em;
+  }
+  .homepage-quem-somos-section {
+    flex-direction: column;
+    text-align: center;
+  }
+  .homepage-quem-somos-content {
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .homepage-header {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .homepage-nav {
+    flex-direction: column;
+    gap: 5px;
+  }
+  .homepage-hero-section {
+    height: 300px;
+  }
+  .homepage-hero-title {
+    font-size: 1.5em;
+  }
+  .homepage-hero-subtitle {
+    font-size: 1em;
+  }
+  .homepage-service-cards,
+  .homepage-bottom-images-section {
+    flex-direction: column;
+    align-items: center;
+  }
+  .homepage-card,
+  .homepage-bottom-image-card {
+    width: 80%;
+  }
+}

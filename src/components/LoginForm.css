@@ -1,84 +1,124 @@
-body {
+/* src/components/LoginForm.css */
+
+/* Garantir que HTML, Body e Root ocupem a tela toda (essencial para todas as páginas) */
+html, body, #root {
+  height: 100%;
   margin: 0;
-  font-family: sans-serif;
-  background-color: #e9ebef;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  overflow: hidden; /* Evita barras de rolagem indesejadas */
+  box-sizing: border-box;
 }
 
 .login-page {
-  height: 100vh;
+  background-color: #f0f2f5; /* Um fundo cinza claro para a página de login */
   display: flex;
   justify-content: center;
-  align-items: center;
-  background-color: #e9ebef;
+  align-items: center; /* Centraliza o container de login */
+  min-height: 100vh; /* Garante que ocupe a altura total da viewport */
+  width: 100vw; /* Garante que ocupe a largura total da viewport */
+  box-sizing: border-box;
 }
 
 .login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff; /* Fundo branco para o container principal de login */
+  padding: 40px 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Sombra mais pronunciada */
+  max-width: 400px; /* Largura máxima do formulário de login */
+  width: 90%; /* Responsividade */
   text-align: center;
 }
 
 .logo {
-  width: 150px;
-  margin-bottom: 20px;
+  max-width: 150px; /* Tamanho do logo */
+  margin-bottom: 30px;
+  height: auto;
 }
 
 .login-box {
-  background-color: #c2e3dc;
-  padding: 30px 20px;
-  border-radius: 20px;
-  width: 280px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
 }
 
 .user-icon {
-  font-size: 50px;
-  background-color: #4db58d;
-  color: white;
-  border-radius: 50%;
   width: 80px;
   height: 80px;
-  margin: 0 auto 20px;
+  background-color: #2f8d60; /* Cor verde para o ícone de usuário */
+  border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 25px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.user-icon .fa-user {
+  font-size: 3.5em; /* Tamanho do ícone */
+  color: #fff; /* Cor do ícone (branco) */
 }
 
 .input {
-  display: block;
-  width: 100%;
-  padding: 12px;
+  width: calc(100% - 20px); /* Largura total menos padding */
+  padding: 12px 10px;
   margin-bottom: 15px;
-  border: none;
-  border-radius: 20px;
-  background-color: #28a37f;
-  color: white;
-  font-size: 14px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1em;
+  box-sizing: border-box; /* Garante que padding e border não aumentem a largura total */
 }
 
 .input::placeholder {
-  color: white;
+  color: #aaa;
 }
 
 .options {
   display: flex;
   justify-content: space-between;
+  width: 100%;
+  margin-bottom: 25px;
+  font-size: 0.85em;
+}
+
+.checkbox-label {
+  display: flex;
   align-items: center;
-  font-size: 12px;
-  margin-bottom: 15px;
-  color: #444;
+  color: #555;
+  cursor: pointer;
+}
+
+.checkbox-label input[type="checkbox"] {
+  margin-right: 5px;
+  accent-color: #2f8d60; /* Cor de destaque para o checkbox */
 }
 
 .forgot {
-  color: #444;
+  color: #2f8d60; /* Cor verde para o link */
   text-decoration: none;
 }
 
+.forgot:hover {
+  text-decoration: underline;
+}
+
 .login-button {
-  background-color: #00477e;
+  width: 100%;
+  padding: 12px;
+  background-color: #2f8d60; /* Verde do botão de login */
   color: white;
   border: none;
-  padding: 10px 0;
-  width: 100%;
-  border-radius: 20px;
-  font-size: 16px;
+  border-radius: 5px;
+  font-size: 1.1em;
+  font-weight: bold;
   cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.login-button:hover {
+  background-color: #3eaf72; /* Verde mais claro no hover */
 }

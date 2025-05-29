@@ -1,0 +1,166 @@
+/* AgendamentoClientes.css */
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow: hidden; /* Prevent scrollbar if container is 100vh */
+}
+
+.container {
+  display: flex;
+  height: 100vh; /* Full viewport height */
+  font-family: Arial, sans-serif; /* More common sans-serif font */
+}
+
+.left-panel {
+  width: 50%;
+  background-color: #2f8d60; /* Darker green as per previous image's right panel */
+  color: white;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center; /* Center content horizontally */
+  text-align: center; /* Center text */
+}
+
+.profile-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center items in profile section */
+  margin-top: 32px;
+}
+
+.profile-icon {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: #f0f0f0; /* Lighter grey for better contrast */
+  color: #2f8d60; /* Green icon color */
+  font-size: 40px; /* Larger icon */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px; /* Space between icon and text */
+}
+
+.profile-section h2 {
+  font-size: 1.8em; /* Larger heading */
+  margin: 0; /* Remove default margin */
+}
+
+.calendar-section {
+  margin-top: 40px;
+  width: 100%; /* Ensure calendar takes full width for grid */
+  max-width: 350px; /* Limit calendar width for better appearance */
+  margin-left: auto; /* Center the calendar section */
+  margin-right: auto; /* Center the calendar section */
+}
+
+.calendar-month-nav {
+  font-size: 2em; /* Make month larger */
+  margin-bottom: 15px; /* Space between month and days */
+  font-weight: bold;
+}
+
+.calendar {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 8px; /* Increased gap for better spacing */
+  margin-top: 8px;
+  background-color: rgba(255, 255, 255, 0.2); /* Slight transparent white background for calendar grid */
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.calendar-header {
+  font-weight: bold;
+  padding: 5px 0;
+  font-size: 0.9em;
+  text-align: center;
+}
+
+.calendar-day {
+  text-align: center;
+  padding: 10px 0; /* More padding for larger clickable area */
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  font-weight: bold;
+  background-color: rgba(255, 255, 255, 0.2); /* Light transparent background for days */
+}
+
+.calendar-day:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+.calendar-day.other-month-day {
+  opacity: 0.5; /* Fade out days from other months */
+}
+
+.footer-panel {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 100%; /* Ensure footer spans full width of panel */
+  padding: 0 10px; /* Add some padding to match spacing */
+  margin-top: 30px; /* Push footer down */
+}
+
+.footer-text {
+  opacity: 0.8; /* Make text a bit more visible */
+  font-size: 0.8em; /* Slightly smaller */
+}
+
+.logo {
+  width: 100px; /* Make logo slightly larger */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.right-panel {
+  width: 50%;
+  background-color: white;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.section h3 {
+  color: #14497b; /* Dark blue for headings */
+  margin-bottom: 15px; /* More space below heading */
+  font-size: 1.4em; /* Slightly larger heading */
+}
+
+.button-group,
+.button-grid {
+  display: flex;
+  gap: 15px; /* Increased gap for buttons */
+  flex-wrap: wrap;
+}
+
+.btn {
+  background-color: #2f8d60; /* Green button background */
+  color: white;
+  padding: 12px 28px; /* More padding for larger buttons */
+  border: none;
+  border-radius: 25px; /* More rounded corners */
+  cursor: pointer;
+  font-size: 1em;
+  transition: background-color 0.2s ease;
+}
+
+.btn:hover {
+  background-color: #26774f; /* Slightly darker green on hover */
+}
+
+.select {
+  padding: 12px; /* More padding for select */
+  width: 100%; /* Make select full width */
+  max-width: 300px; /* Limit max width for better form control */
+  border: 1px solid #ccc;
+  border-radius: 8px; /* More rounded select */
+  font-size: 1em;
+  color: #333;
+  background-color: #f9f9f9; /* Slight background for select */
+}

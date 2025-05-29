@@ -1,0 +1,218 @@
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+  overflow: hidden;
+}
+body {
+  background-color: #f0f2f5;
+}
+*/
+
+.funcionarios-page-container {
+  background-color: #fff; /* Fundo branco do container principal */
+  border-radius: 8px; /* Bordas levemente arredondadas */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra mais visível */
+  width: 950px; /* Largura total do container, ajustado para a imagem [Image of registro whatsapp] */
+  height: 600px; /* Altura total do container, ajustada para a imagem [Image of registro whatsapp] */
+  max-width: 95vw; /* Limita a largura máxima para telas menores */
+  max-height: 95vh; /* Limita a altura máxima para telas menores */
+  display: flex;
+  flex-direction: column;
+  overflow: hidden; /* Garante que as bordas arredondadas funcionem corretamente */
+  margin: auto; /* Centraliza o container na página */
+}
+
+/* Cabeçalho "Tela de agendamento - Funcionários" */
+.funcionarios-header {
+  background-color: #fff;
+  padding: 15px 30px;
+  border-bottom: 1px solid #eee;
+}
+
+.funcionarios-header h1 {
+  margin: 0;
+  font-size: 1.3em;
+  color: #333;
+  font-weight: normal;
+}
+
+/* Conteúdo Principal (Painel Esquerdo + Painel Direito) */
+.funcionarios-main-content {
+  display: flex;
+  flex-grow: 1; /* Permite que ocupe o espaço restante */
+}
+
+/* Painel Esquerdo - Formulário */
+.funcionarios-left-panel {
+  flex: 1; /* Ocupa metade da largura disponível */
+  padding: 30px;
+  background-color: #fcfcfc; /* Fundo branco quase puro */
+  border-right: 1px solid #eee;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Espaçamento entre os grupos de formulário */
+}
+
+.funcionarios-form-group {
+  margin-bottom: 20px;
+}
+
+.funcionarios-form-group label {
+  display: block; /* Garante que a label ocupe sua própria linha */
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #555;
+  font-size: 0.95em;
+}
+
+.funcionarios-select {
+  width: 100%;
+  padding: 10px 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #e0f2f1; /* Cor de fundo verde claro dos selects [Image of registro whatsapp] */
+  color: #333;
+  font-size: 1em;
+  -webkit-appearance: none; /* Remove estilo padrão de select em Webkit */
+  -moz-appearance: none; /* Remove estilo padrão de select em Mozilla */
+  appearance: none; /* Remove estilo padrão de select */
+  /* Adiciona uma seta personalizada para o select */
+  background-image: url('data:image/svg+xml;charset=US-8859-1,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 4 5"%3E%3Cpath fill="%23333" d="M2 0L0 2h4zm0 5L0 3h4z"/%3E%3C/svg%3E');
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 8px 10px;
+  cursor: pointer;
+}
+
+.funcionarios-checkbox-group {
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Espaçamento entre os checkboxes */
+  margin-top: 20px;
+}
+
+.funcionarios-checkbox-label {
+  display: flex;
+  align-items: center; /* Alinha o checkbox com o texto */
+  color: #555;
+  font-weight: normal;
+  font-size: 0.9em;
+}
+
+.funcionarios-checkbox-label input[type="checkbox"] {
+  margin-right: 8px; /* Espaço entre o checkbox e o texto */
+  accent-color: #4CAF50; /* Cor verde para o checkbox (estilo nativo) */
+  transform: scale(1.1); /* Deixa o checkbox um pouco maior */
+}
+
+/* Painel Direito - Calendário e Ícone */
+.funcionarios-right-panel {
+  flex: 1; /* Ocupa metade da largura disponível */
+  background-color: #2f8d60; /* Cor de fundo verde escura [Image of registro whatsapp] */
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centraliza o conteúdo horizontalmente */
+  color: #fff; /* Texto branco */
+  min-width: 380px; /* Garante que o painel não fique muito estreito */
+}
+
+.funcionarios-user-icon-container {
+  width: 90px;
+  height: 90px;
+  background-color: #fff; /* Fundo branco do círculo do ícone [Image of registro whatsapp] */
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 25px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.funcionarios-user-icon {
+  font-size: 4em;
+  color: #b0c9bb; /* Cor cinza claro/verde clara do ícone [Image of registro whatsapp] */
+}
+
+.funcionarios-select-date-text {
+  font-size: 1.2em;
+  margin-bottom: 30px;
+  font-weight: normal;
+  opacity: 0.9;
+}
+
+.funcionarios-calendar-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.funcionarios-calendar-header .funcionarios-arrow {
+  font-size: 1.8em;
+  cursor: pointer;
+  padding: 0 20px;
+  opacity: 0.9;
+}
+
+.funcionarios-calendar-header .funcionarios-month {
+  font-size: 2em;
+  font-weight: bold;
+}
+
+.funcionarios-calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr); /* 7 colunas para os dias da semana */
+  gap: 8px;
+  width: 100%;
+  max-width: 380px; /* Largura máxima do calendário */
+  background-color: rgba(255, 255, 255, 0.1); /* Fundo sutilmente transparente para o grid */
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.funcionarios-day-of-week {
+  text-align: center;
+  font-weight: bold;
+  font-size: 0.9em;
+  padding: 5px 0;
+  opacity: 0.9;
+}
+
+.funcionarios-calendar-day {
+  text-align: center;
+  padding: 8px 5px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+  background-color: rgba(255, 255, 255, 0.15); /* Fundo dos dias, mais transparente */
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+.funcionarios-calendar-day:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+  transform: scale(1.05);
+}
+
+.funcionarios-calendar-day.funcionarios-other-month {
+  opacity: 0.4; /* Opacidade para dias de outros meses, mais suave */
+  pointer-events: none; /* Desabilita clique em dias de outros meses */
+}
+
+.funcionarios-sisc-logo {
+  margin-top: auto; /* Empurra o logo para baixo */
+  align-self: flex-end; /* Alinha o logo à direita no painel */
+  padding-top: 30px; /* Espaço acima do logo */
+}
+
+.funcionarios-sisc-logo img {
+  max-width: 80px; /* Tamanho do logo */
+  height: auto;
+  opacity: 0.8;
+}

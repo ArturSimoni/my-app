@@ -1,0 +1,138 @@
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+  overflow: hidden; /* Evita barras de rolagem indesejadas */
+}
+body {
+  background-color: #f0f2f5; /* Cor de fundo padrão para o body */
+}
+
+
+.registro-cliente-page {
+  background-color: #a7d9c6; /* Cor de fundo da página (verde claro)  */
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Centraliza o container de registro */
+  min-height: 100vh; /* Ocupa a altura total da viewport */
+  width: 100vw; /* Ocupa a largura total da viewport */
+  box-sizing: border-box;
+}
+
+.registro-cliente-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #e0f2f1; /* Cor de fundo do formulário (verde bem claro)  */
+  padding: 40px 30px;
+  border-radius: 15px; /* Bordas arredondadas */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  max-width: 700px; /* Largura máxima do formulário para acomodar duas colunas */
+  width: 90%; /* Responsividade */
+  text-align: center;
+}
+
+.registro-cliente-logo {
+  max-width: 150px; /* Tamanho do logo */
+  margin-bottom: 30px;
+  height: auto;
+}
+
+.registro-cliente-form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.form-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px; /* Espaço entre os inputs na mesma linha */
+  margin-bottom: 15px; /* Espaço entre as linhas de inputs */
+}
+
+.registro-cliente-input {
+  flex: 1; /* Faz com que os inputs ocupem o espaço disponível igualmente */
+  padding: 12px 15px;
+  border: none; /* Remove a borda padrão */
+  border-radius: 25px; /* Bordas bem arredondadas */
+  background-color: #2f8d60; /* Verde escuro dos inputs  */
+  color: #fff; /* Texto branco */
+  font-size: 1em;
+  text-align: center; /* Texto centralizado */
+  outline: none; /* Remove o contorno ao focar */
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1); /* Sombra interna sutil */
+}
+
+.registro-cliente-input::placeholder {
+  color: rgba(255, 255, 255, 0.8); /* Cor do placeholder mais suave */
+}
+
+/* Ajustes para inputs de largura variável (Número e Ponto de Referência) */
+.registro-cliente-input.short-input {
+  flex: 0.4; /* Menor largura */
+}
+
+.registro-cliente-input.long-input {
+  flex: 0.6; /* Maior largura */
+}
+
+
+.registro-cliente-checkbox-group {
+  display: flex;
+  flex-direction: column; /* Checkboxes em coluna */
+  align-items: flex-start; /* Alinha os checkboxes à esquerda */
+  gap: 10px; /* Espaço entre os checkboxes */
+  margin-top: 20px;
+  margin-bottom: 30px;
+  width: 100%;
+}
+
+.registro-cliente-checkbox-label {
+  display: flex;
+  align-items: center;
+  color: #333; /* Cor do texto dos checkboxes */
+  font-size: 0.9em;
+  cursor: pointer;
+}
+
+.registro-cliente-checkbox-label input[type="checkbox"] {
+  margin-right: 10px;
+  accent-color: #2f8d60; /* Cor de destaque para o checkbox */
+  transform: scale(1.1); /* Deixa o checkbox um pouco maior */
+}
+
+.registro-cliente-button {
+  width: 200px; /* Largura fixa do botão */
+  padding: 15px 30px;
+  background-color: #14497b; /* Azul escuro do botão  */
+  color: white;
+  border: none;
+  border-radius: 30px; /* Bordas bem arredondadas */
+  font-size: 1.2em;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  align-self: center; /* Centraliza o botão */
+}
+
+.registro-cliente-button:hover {
+  background-color: #1a5c9a; /* Azul um pouco mais claro no hover */
+}
+
+/* Responsividade básica */
+@media (max-width: 768px) {
+  .form-row {
+    flex-direction: column; /* Em telas menores, inputs ficam em coluna */
+    gap: 10px;
+  }
+  .registro-cliente-input.short-input,
+  .registro-cliente-input.long-input {
+    flex: 1; /* Ocupam a largura total */
+  }
+  .registro-cliente-container {
+    padding: 20px;
+  }
+}
